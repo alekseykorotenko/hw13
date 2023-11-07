@@ -1,0 +1,18 @@
+@mixin fonts($fw, $fs, $fst, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  font-style: $fst;
+  line-height: $lh;
+}
+
+@mixin line_style($cont, $disp, $pos, $btm, $lft, $wdt, $hgt, $br, $bg) {
+  content: $cont;
+  display: $disp;
+  position: $pos;
+  bottom: $btm;
+  left: $lft;
+  width: $wdt;
+  height: $hgt;
+  border-radius: $br;
+  background: $bg;
+}

@@ -1,0 +1,249 @@
+.footer {
+  overflow: hidden;
+  &__container {
+    width: 83%;
+    margin: 0 auto;
+  }
+
+  background: $uncommon-color;
+
+  .footer__phone:hover,
+  .footer__email:hover {
+    color: $secondary-color;
+  }
+
+  .footer__link,
+  .public__link,
+  .footer__map,
+  .footer__email {
+    color: $primary-color;
+  }
+
+  .public__date,
+  .footer__policy {
+    color: $additional-color;
+  }
+
+  .public__link,
+  .footer__phone,
+  .footer__email {
+    @include fonts(700, 1rem, normal, normal);
+  }
+
+  .location,
+  .footer__policy {
+    @include fonts(400, 1rem, normal, normal);
+  }
+
+  &__link {
+    @include fonts(700, 0.875rem, normal, normal);
+
+    display: inline-block;
+    padding: 30px 0 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover {
+      color: $secondary-color;
+      path {
+        stroke: $secondary-color;
+      }
+    }
+  }
+
+  &__heading {
+    @include fonts(700, 2.375rem, normal, normal);
+    margin-bottom: 30px;
+
+    background: $about-us-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__public {
+    display: flex;
+  }
+  .footer__item {
+    width: 32%;
+    margin-right: 30px;
+    background: $main-color;
+
+    .footer__img {
+      height: 200px;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .footer__item--mod {
+    margin-right: 0;
+  }
+
+  .footer__public {
+    padding-bottom: 30px;
+    border-bottom: 2px solid $rare-color;
+  }
+
+  .public__content {
+    padding: 30px;
+
+    .public__link {
+      display: block;
+      padding-bottom: 15px;
+      &:hover {
+        scale: (1.01);
+        text-decoration: underline;
+        transition: 1s all;
+      }
+    }
+    .public__date {
+      @include fonts(700, 0.75rem, normal, normal);
+
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+      border-bottom: 4px solid $rare-color;
+    }
+    .public__text {
+      @include fonts(400, 0.875rem, normal, normal);
+
+      display: block;
+      line-height: 22px;
+      margin-top: 15px;
+    }
+  }
+
+  .footer__contacts {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contacts__location {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__social:hover {
+    animation: shake;
+    animation-duration: 1s;
+  }
+
+  .contacts__img {
+    margin: 0 10px;
+  }
+
+  .contacts__location--mod {
+    padding-bottom: 30px;
+
+    .location {
+      color: #323264;
+    }
+
+    .footer__map {
+      @include fonts(400, 0.75rem, normal, normal);
+
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .footer__phone {
+    color: #46466e;
+  }
+
+  .footer__phone,
+  .footer__policy {
+    text-align: right;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-10deg);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .footer__container {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__public {
+    flex-wrap: wrap;
+    .footer__item {
+      width: 47%;
+    }
+
+    .footer__item--spec {
+      margin-right: 0;
+    }
+
+    .footer__item--mod {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer__public {
+    .footer__item {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    .contacts__block {
+      .footer__policy {
+        padding-top: 30px;
+        text-align: center;
+      }
+      .contacts__location {
+        flex-direction: column;
+        .footer__map {
+          padding-top: 10px;
+        }
+        .footer__phone {
+          padding: 10px 0;
+        }
+        .contacts__img {
+          display: none;
+        }
+      }
+    }
+  }
+}

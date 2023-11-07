@@ -1,0 +1,160 @@
+.partners-block {
+  overflow: hidden;
+}
+
+.partners-container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .partners-container__heading {
+    @include fonts(700, 0.875rem, normal, normal);
+
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--main-regular, #323264);
+  }
+
+  .container__item__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+    margin-bottom: 60px;
+  }
+
+  #hilel {
+    padding: 36px 26%;
+    background: #1c4280;
+    border-radius: 12px 0 0 0;
+    img {
+      width: 100%;
+    }
+  }
+
+  #wannabiz {
+    padding: 39px 27%;
+    background: #143646;
+    img {
+      width: 100%;
+    }
+  }
+
+  #tapgerine {
+    padding: 38px 29%;
+    background: linear-gradient(0deg, #f48b30 0%, #f48b30 100%), #f48b30;
+    img {
+      width: 100%;
+    }
+  }
+  #look {
+    padding: 39px 29%;
+    background: #9e4dc3;
+    border-radius: 0 12px 0 0;
+
+    img {
+      width: 100%;
+    }
+  }
+  #orangear {
+    padding: 38px 30%;
+    background: #fd9339;
+    img {
+      width: 100%;
+    }
+  }
+  #adtelligent {
+    padding: 36px 24%;
+    background: #e2e2e4;
+    img {
+      width: 100%;
+    }
+  }
+  #clickky {
+    padding: 29px 34%;
+    background: #c71c36;
+    img {
+      width: 100%;
+    }
+  }
+  #ecoleasing {
+    padding: 22px 33%;
+    background: #dcf3f9;
+    img {
+      width: 100%;
+    }
+  }
+  #infratek {
+    padding: 30px 29%;
+    background: #eaeaea;
+    border-radius: 0 0 0 12px;
+
+    img {
+      width: 100%;
+    }
+  }
+  #citypark {
+    padding: 41px 29%;
+    background: #282240;
+    img {
+      width: 100%;
+    }
+  }
+  #artprint {
+    padding: 37px 28%;
+    background: #1d4568;
+    img {
+      width: 100%;
+    }
+  }
+  #ultimatecard {
+    padding: 13px 32%;
+    background: #000;
+    border-radius: 0 0 12px 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .partners-container {
+    width: 100%;
+    #hilel,
+    #look,
+    #infratek,
+    #ultimatecard {
+      border-radius: 0;
+    }
+    .container__item__list {
+      margin-bottom: 0;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .partners-container {
+    .container__item__list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .partners-container {
+    .container__item__list {
+      grid-template-columns: 1fr;
+
+      #clickky,
+      #ecoleasing,
+      #infratek,
+      #citypark,
+      #artprint,
+      #ultimatecard {
+        display: none;
+      }
+    }
+  }
+}
