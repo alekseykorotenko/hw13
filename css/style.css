@@ -217,6 +217,9 @@ button {
   background-position: center top;
   background-image: url(../imgs/bg_photo.svg);
 }
+.header .header__logo-link {
+  display: flex;
+}
 .header .header__wrapper--mod {
   background-image: none;
 }

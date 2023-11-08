@@ -49,7 +49,9 @@
     background-position: center top;
     background-image: url(../imgs/bg_photo.svg);
   }
-
+  .header__logo-link {
+    display: flex;
+  }
   .header__wrapper--mod {
     background-image: none;
   }
@@ -572,6 +574,7 @@
       }
     }
   }
+
   .about-us__info {
     .about-us__list-heading {
       text-align: left;
